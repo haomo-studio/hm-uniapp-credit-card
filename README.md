@@ -14,7 +14,7 @@
 
 ## 技术支持
 
-* [uni-app插件市场](https://ext.dcloud.net.cn/plugin?id=1380)
+* [uni-app插件市场](https://ext.dcloud.net.cn/plugin?id=1520)
 
 * [npm包](https://www.npmjs.com/package/hm-uniapp-credit-card)
 
@@ -48,7 +48,7 @@ export default {
 ```html
 <template>
   <div class="test-component">
-    <hm-credit-card></hm-credit-card>
+    <hm-credit-card :options="options"></hm-credit-card>
   </div>
 </template>
 <script>
@@ -58,6 +58,15 @@ export default {
   components: { HmCreditCard },
   data() {
     return {
+      options: {
+          avatarText: '王',
+          nameText: '王小二',
+          nameIcon:
+            '/static/hm-credit-card/images/img_24428_0_0.png',
+          introduce: '介绍',
+          curriculum: '课程',
+          points: '79分'
+        }
     };
   },
   methods: {
@@ -69,6 +78,7 @@ export default {
 </script>
 <style>
 </style>
+
 ```
 
 ## 属性说明
@@ -81,7 +91,11 @@ options对象各个属性说明如下：
 
 | 属性名        | 类型     | 默认值 | 说明                                                                       |
 |-----------   |---------|--------|----------------------------------------------------------------------------|
-| title        | String  | -      | 标题文字                                                                   |
+| nameText        | String  | -      | 姓名                                                                   |
+| nameIcon        | String  | -      | 状态图片                                                                   |
+| introduce        | String  | -      | 介绍                                                                   |
+| curriculum        | String  | -      | 课程                                                                   |
+| points        | String  | -      | 分数                                                                   |
 
 ## 事件说明
 
@@ -91,6 +105,6 @@ options对象各个属性说明如下：
 
 ## 更新日志
 
-### 0.0.1(2020-03-07)
+### 0.0.1(2020-03-28)
 
 * 完成第一个版本
